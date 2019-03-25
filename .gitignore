@@ -1,0 +1,16 @@
+#######################
+# UE4 Generated Files #
+#######################
+*/Binaries
+*/Build
+*/Intermediate
+*/Saved
+*/Intermediate
+BuildingEscape/Content/StarterContent/
+
+#######################
+# Visual Studio Files #
+#######################
+*VC.db
+*.vs
+*.sln 
