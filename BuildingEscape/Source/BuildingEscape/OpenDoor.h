@@ -8,6 +8,7 @@
 #include "Runtime/Core/Public/Math/Vector.h"
 #include "Runtime/Core/Public/Math/Rotator.h"
 #include "Runtime/Engine/Classes/Engine/World.h"
+#include "Runtime/Engine/Classes/GameFramework/Actor.h"
 
 #include "OpenDoor.generated.h"
 

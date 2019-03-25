@@ -18,12 +18,29 @@ void UOpenDoor::BeginPlay()
 {
 	Super::BeginPlay();
 	DoorOpening();
-	
+
+	FRotator GetRotation = (*TheDoor).GetActorRotation();
+
+	float a = GetRotation.Pitch;
+	float b = GetRotation.Yaw;
+	float c = GetRotation.Roll;
+
+	FRotator CallRotation
+	(
+		a, ///_> Pitch
+		b, ///_> Yaw
+		c ///_> Roll
+	);
+
+	UE_LOG(LogTemp, Warning, TEXT("The rotational value of the door is: %s"), *CallRotation.ToString());
 }
 
 void UOpenDoor::DoorOpening()
 {
 	(*TheDoor).SetActorRotation(FRotator(0.f, yaw, 0.f));
+
+	
+
 }
 
 // Called every frame
