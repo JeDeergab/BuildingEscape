@@ -3,22 +3,23 @@
 #pragma once
 
 #include "CoreMinimal.h"
-
 #include "Components/ActorComponent.h"
+
 #include "Runtime/Core/Public/Math/Vector.h"
 #include "Runtime/Core/Public/Math/Rotator.h"
 #include "Runtime/Engine/Classes/Engine/World.h"
 
-#include "PositionReport.generated.h"
+#include "OpenDoor.generated.h"
+
 
 UCLASS( ClassGroup=(Custom), meta=(BlueprintSpawnableComponent) )
-class BUILDINGESCAPE_API UPositionReport : public UActorComponent
+class BUILDINGESCAPE_API UOpenDoor : public UActorComponent
 {
 	GENERATED_BODY()
 
 public:	
 	// Sets default values for this component's properties
-	UPositionReport();
+	UOpenDoor();
 
 	// Called every frame
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
@@ -26,11 +27,12 @@ public:
 protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
-	void RotateChair();
+	void DoorOpening();
+
+public:	
+	AActor * TheDoor = GetOwner();
+	float yaw = 89.f;
 
 
-public:
-	AActor * MyObject = GetOwner();
-	float yaw = 82.f;
 		
 };
