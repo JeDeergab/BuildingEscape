@@ -19,13 +19,11 @@ void UOpenDoor::BeginPlay()
 	Super::BeginPlay();
 	DoorOpening();
 
-	/*
 	FRotator GetRotation = (*TheDoor).GetActorRotation();
 
 	float a = GetRotation.Pitch;
 	float b = GetRotation.Yaw;
 	float c = GetRotation.Roll;	
-	*/
 
 	FRotator CallRotation
 	(
