@@ -19,6 +19,7 @@ void UOpenDoor::BeginPlay()
 	Super::BeginPlay();
 	DoorOpening();
 
+	/*
 	FRotator GetRotation = (*TheDoor).GetActorRotation();
 
 	float a = GetRotation.Pitch;
@@ -31,6 +32,8 @@ void UOpenDoor::BeginPlay()
 		b, ///_> Yaw
 		c ///_> Roll
 	);
+	
+	*/
 
 	UE_LOG(LogTemp, Warning, TEXT("The rotational value of the door is: %s"), *CallRotation.ToString());
 }
